@@ -22,13 +22,17 @@ export interface MyLabelProps {
   * Aca puedes elegir color de fuente
   */
   fontColor?: string
+  /**
+  * Aca puedes elegir color de fondo 
+  */
+  backgroundColor?: string
 }
 
-export const MyLabel = ({ label = "sin label", size = 'normal', color, allCaps, fontColor }: MyLabelProps) => {
+export const MyLabel = ({ label = "sin label", size = 'normal', color, allCaps, fontColor, backgroundColor= "transparent" }: MyLabelProps) => {
 
 
   return (
-    <span className={`label ${size} text-${color}`} style={{color : fontColor}} >
+    <span className={`label ${size} text-${color}`} style={{color : fontColor, backgroundColor}} >
       {allCaps ? label.toUpperCase() : label}
     </span>
   )
