@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Semantic Realase
+name: Semantic Relaese
 
 # Controls when the workflow will run
 on:
@@ -22,7 +22,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         widt:
           node-version: 14.17
 
@@ -34,6 +34,6 @@ jobs:
 
       -name: Semantic Release 
        env:
-         GITHUB_TOKEN: ${{ secrets.STORYBOOKTOKEN}}
-         NPM_TOKEN: ${{ secrets.NPMTOKEN}}
+         GITHUB_TOKEN: ${{ secrets.STORYBOOKTOKEN }}
+         NPM_TOKEN: ${{ secrets.NPMTOKEN }}
        run: npx semantic-release   
